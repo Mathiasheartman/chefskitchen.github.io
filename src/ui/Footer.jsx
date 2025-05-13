@@ -92,7 +92,7 @@ function Footer({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
 
       <hr className="text-gray-300" />
 
-      <div className="items-center justify-between py-9 text-center text-xs text-gray-500 md:text-sm lg:flex lg:text-lg">
+      <div className="items-center justify-between px-7 py-9 text-center text-xs text-gray-500 md:px-10 md:text-sm lg:flex lg:text-lg">
         <p>
           @2025 - Chef's kitchen. Distributed By ThemeWagon and Developed by
           GetNextjsTemplates
