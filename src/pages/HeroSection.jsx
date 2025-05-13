@@ -26,7 +26,7 @@ function HeroSection({ homeRef }) {
           alt="bannerImg"
         />
         <div className="absolute bottom-10 left-10 hidden w-55 items-center gap-2 rounded-2xl bg-white px-2 py-3 lg:flex">
-          <img className="h-14" src="src\img\pizza.svg" alt="" />
+          <img className="h-14" src="/src/assets/pizza.svg" alt="" />
           <p className="w-50">More than 500+ recipes.</p>
         </div>
       </div>
