@@ -10,8 +10,8 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   };
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 m-auto bg-white px-7 py-2 lg:max-w-[1440px]">
-      <div className="flex items-center justify-between pt-1">
+    <header className="fixed top-0 right-0 left-0 z-50 m-auto bg-white px-7 py-3 lg:max-w-[1440px]">
+      <div className="flex items-center justify-between pt-1 pb-2">
         <div>
           <Logo />
         </div>
