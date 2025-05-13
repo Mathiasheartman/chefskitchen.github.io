@@ -23,7 +23,7 @@ function Newsletter() {
       <div>
         <img
           className="absolute top-0 right-0 hidden sm:right-[-3%] sm:block sm:h-50 md:right-0 md:bottom-20 md:h-90 lg:right-10"
-          src="src\img\soup.svg"
+          src="/src/assets/soup.svg"
           alt="soup"
         />
         {/* <img
@@ -33,7 +33,7 @@ function Newsletter() {
         /> */}
         <img
           className="absolute top-95 right-60 hidden lg:block"
-          src="src\img\onion.svg"
+          src="/src/assets/onion.svg"
           alt="onion"
         />
       </div>

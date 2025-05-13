@@ -13,19 +13,23 @@ function Gallery({ galleryRef }) {
 
       <div className="flex gap-6">
         <div className="flex flex-col gap-6">
-          <img className="w-200" src="src\img\foodone.jpg" alt="foodone" />
+          <img className="w-200" src="/src/assets/foodone.jpg" alt="foodone" />
           <img
             className="w-200 rounded-3xl"
-            src="src\img\foodtwo.jpg"
+            src="/src/assets/foodtwo.jpg"
             alt="foodtwo"
           />
         </div>
 
         <div className="flex flex-col gap-6">
-          <img className="w-200" src="src\img\foodthree.jpg" alt="foodthree" />
+          <img
+            className="w-200"
+            src="/src/assets/foodthree.jpg"
+            alt="foodthree"
+          />
           <img
             className="w-200 rounded-3xl"
-            src="src\img\foodfour.jpg"
+            src="/src/assets/foodfour.jpg"
             alt="foodfour"
           />
         </div>

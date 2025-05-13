@@ -6,7 +6,7 @@ function Recipe({ recipeRef }) {
       <div className="items-center px-7 pb-30 md:px-10 lg:flex">
         <img
           className="m-auto md:h-140 lg:h-150 lg:max-w-150"
-          src="src\img\cookWithUs.png"
+          src="/src/assets/cookWithUs.png"
           alt="cookWithUs"
         />
         <div>
@@ -34,7 +34,7 @@ function Recipe({ recipeRef }) {
 
       <img
         className="absolute right-0 bottom-85 hidden h-120 lg:block"
-        src="src\img\burgerPot.png"
+        src="/src/assets/burgerPot.png"
         alt="burger"
       />
 

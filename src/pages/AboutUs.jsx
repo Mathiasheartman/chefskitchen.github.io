@@ -2,7 +2,7 @@ function AboutUs({ aboutUsRef }) {
   return (
     <section
       ref={aboutUsRef}
-      className="relative w-full px-7 pt-20 text-center md:px-10 lg:pt-35"
+      className="relative w-full px-7 pt-20 text-center md:px-10 lg:pt-30"
     >
       <h4 className="md:text-md pb-3 text-sm tracking-[0.7rem] text-[var(--defaultColor)] xl:text-lg">
         FEATURES
@@ -15,7 +15,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="src\img\featureOne.svg"
+              src="/src/assets/featureOne.svg"
               alt="featureOne"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">
@@ -34,7 +34,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="src\img\featureTwo.svg"
+              src="/src/assets/featureTwo.svg"
               alt="featureTwo"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">
@@ -56,7 +56,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="src\img\featureThree.svg"
+              src="/src/assets/featureThree.svg"
               alt="featureThree"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">Best chef</h1>
@@ -73,7 +73,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="src\img\featureFour.svg"
+              src="/src/assets/featureFour.svg"
               alt="featureFour"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">Fast food</h1>

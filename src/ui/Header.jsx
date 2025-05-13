@@ -46,7 +46,7 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
           </ul>
         </nav>
         <p className="top-18 right-10 flex cursor-pointer items-center text-xl">
-          <img className="h-4 md:h-8" src="src\img\call.png" alt="call" />{" "}
+          <img className="h-4 md:h-8" src="/src/assets/call.png" alt="call" />{" "}
           <span className="text-[0.5rem] text-black hover:text-amber-700 md:text-sm lg:text-lg">
             +1(909) 235-9814
           </span>

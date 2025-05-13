@@ -22,7 +22,7 @@ function HeroSection({ homeRef }) {
       <div className="relative">
         <img
           className="block pt-8 md:h-130 md:w-170 md:pt-0 lg:h-140 lg:w-220"
-          src="src\img\banner-image.png"
+          src="/src/assets/banner-image.png"
           alt="bannerImg"
         />
         <div className="absolute bottom-10 left-10 hidden w-55 items-center gap-2 rounded-2xl bg-white px-2 py-3 lg:flex">
