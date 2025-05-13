@@ -15,7 +15,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="/src/assets/featureOne.svg"
+              src="/featureOne.svg"
               alt="featureOne"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">
@@ -34,7 +34,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="/src/assets/featureTwo.svg"
+              src="/featureTwo.svg"
               alt="featureTwo"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">
@@ -56,7 +56,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="/src/assets/featureThree.svg"
+              src="/featureThree.svg"
               alt="featureThree"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">Best chef</h1>
@@ -73,7 +73,7 @@ function AboutUs({ aboutUsRef }) {
           <div className="featureBg relative h-100 rounded-4xl lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
-              src="/src/assets/featureFour.svg"
+              src="/featureFour.svg"
               alt="featureFour"
             />
             <h1 className="pt-25 text-lg lg:text-xl xl:text-2xl">Fast food</h1>
