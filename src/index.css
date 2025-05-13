@@ -33,7 +33,7 @@
 
 @keyframes slideIn {
   from {
-    transform: translateY(-100px) translateX(20px) scaleY(0);
+    transform: translateY(-120px) translateX(20px) scaleY(0);
   }
   to {
     transform: translateY(0) translateX(0) scaleY(1);
