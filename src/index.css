@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --defaultColor: #df6853;
+  --defaultColorfade: #ffe3de;
+}
+
+.featureBg {
+  background-image: linear-gradient(
+    180deg,
+    hsl(220deg 13% 91%) 0%,
+    hsl(220deg 13% 91%) 5%,
+    hsl(220deg 13% 92%) 11%,
+    hsl(220deg 13% 92%) 16%,
+    hsl(220deg 13% 93%) 21%,
+    hsl(220deg 13% 93%) 26%,
+    hsl(220deg 13% 94%) 32%,
+    hsl(220deg 13% 94%) 37%,
+    hsl(220deg 13% 95%) 42%,
+    hsl(220deg 13% 95%) 47%,
+    hsl(220deg 13% 96%) 53%,
+    hsl(220deg 13% 96%) 58%,
+    hsl(220deg 13% 97%) 63%,
+    hsl(220deg 13% 97%) 68%,
+    hsl(220deg 13% 98%) 74%,
+    hsl(220deg 13% 98%) 79%,
+    hsl(220deg 13% 99%) 84%,
+    hsl(220deg 12% 99%) 89%,
+    hsl(220deg 12% 100%) 95%,
+    hsl(0deg 0% 100%) 100%
+  );
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.nav {
+  animation: slideIn 0.3s ease-in-out;
+}
+.menuFirst {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-45deg) translateX(-5px) translateY(4px);
+}
+.menuMid {
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.menuLast {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(45deg) translateX(-5px) translateY(-4px);
+}
