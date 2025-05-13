@@ -18,7 +18,7 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
         <nav
           className={`absolute top-12 right-0 ${show ? "" : "hidden"} nav rounded-bl-lg bg-white sm:static sm:block`}
         >
-          <ul className="flex flex-col gap-4 px-9 pt-2 pb-5 text-xl text-gray-700 sm:flex-row sm:gap-5 sm:text-gray-400 md:text-lg">
+          <ul className="flex flex-col gap-8 px-9 pt-2 pb-5 text-xl text-gray-700 sm:flex-row sm:gap-5 sm:text-gray-400 md:text-lg">
             <li
               onClick={() => scrollTo(homeRef)}
               className="cursor-pointer hover:text-[var(--defaultColor)]"
