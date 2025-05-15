@@ -5,14 +5,19 @@ import Logo from "./Logo";
 function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   const [show, setShow] = useState(false);
   const navRef = useRef(null);
+  const toggleBtnRef = useRef(null);
 
   const handleClick = function () {
-    setShow(!show);
+    setShow((prev) => !prev);
   };
 
   useEffect(() => {
     function outsideClick(e) {
-      if (navRef.current && !navRef.current.contains(e.target)) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(e.target) &&
+        !toggleBtnRef.current.contains(e.target)
+      ) {
         setShow(false);
       }
     }
@@ -35,7 +40,7 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
           <p className="py-4 pl-7 md:hidden">
             <Logo />
           </p>
-          <ul className="flex flex-col gap-5 px-14 pt-4 pb-5 text-xl text-gray-700 sm:text-gray-700 md:flex-row md:items-center md:gap-7 md:px-0 md:text-[1rem] lg:gap-15 lg:text-xl">
+          <ul className="flex w-fit flex-col gap-5 px-14 pt-4 pb-5 text-xl text-gray-700 sm:text-gray-700 md:flex-row md:items-center md:gap-7 md:px-0 md:text-[1rem] lg:gap-15 lg:text-xl">
             <li
               onClick={() => scrollTo(homeRef)}
               className="cursor-pointer hover:text-[var(--defaultColor)]"
@@ -78,6 +83,7 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
         </nav>
 
         <button
+          ref={toggleBtnRef}
           onClick={handleClick}
           className={`absolute right-4 flex flex-col gap-1 md:hidden`}
         >
