@@ -1,13 +1,26 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import Logo from "./Logo";
 
 function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   const [show, setShow] = useState(false);
+  const navRef = useRef(null);
 
   const handleClick = function () {
     setShow(!show);
   };
+
+  useEffect(() => {
+    function outsideClick(e) {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setShow(false);
+      }
+    }
+    document.addEventListener("mousedown", outsideClick);
+    return () => {
+      document.removeEventListener("mousedown", outsideClick);
+    };
+  }, []);
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50 m-auto bg-white px-7 py-3 lg:max-w-[1440px]">
@@ -16,6 +29,7 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
           <Logo />
         </div>
         <nav
+          ref={navRef}
           className={`absolute top-0 right-0 left-0 ${show ? "" : "hidden"} nav rounded-bl-lg bg-white md:static md:block`}
         >
           <p className="py-4 pl-7 md:hidden">
