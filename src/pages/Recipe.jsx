@@ -1,8 +1,13 @@
 import Button from "../ui/Button";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import Slides from "../ui/Slides";
 
 function Recipe({ recipeRef }) {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+
   return (
-    <section ref={recipeRef} className="relative text-center lg:text-left">
+    <section ref={recipeRef} className="text-center lg:text-left">
       <div className="items-center px-7 pb-30 md:px-10 lg:flex">
         <img
           className="m-auto md:h-140 lg:h-150 lg:max-w-150"
@@ -32,18 +37,55 @@ function Recipe({ recipeRef }) {
         </div>
       </div>
 
-      <img
-        className="absolute right-0 bottom-85 hidden h-120 lg:block"
-        src="/burgerPot.png"
-        alt="burger"
-      />
-
-      <div className="bg-[var(--defaultColorfade)] pt-25 pb-80 text-center">
+      <div className="relative bg-[var(--defaultColorfade)] pt-25 pb-30 text-center">
+        <img
+          className="absolute right-0 bottom-160 hidden h-120 lg:block"
+          src="/burgerPot.png"
+          alt="burger"
+        />
         <h4 className="pb-3 text-lg tracking-[0.7rem] text-[var(--defaultColor)]">
           EXPERT CHEFS
         </h4>
-        <h1 className="pb-3 text-6xl">Let's meet the expert.</h1>
-        {/* carousel */}
+        <h1 className="pb-20 text-6xl">Let's meet the expert.</h1>
+
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            <div className="min-w-0 flex-none basis-full md:basis-auto">
+              <Slides src={"/girl.png"} alt={"girl"} rankChef={"Junior Chef"} />
+            </div>
+            <div className="min-w-0 flex-none basis-full md:basis-auto">
+              <Slides
+                src={"/boyone.svg"}
+                alt={"boyone"}
+                rankChef={"Senior Chef"}
+              />
+            </div>
+            <div className="min-w-0 flex-none basis-full md:basis-auto">
+              <Slides
+                src={"/boytwo.svg"}
+                alt={"boytwo"}
+                rankChef={"Junior Chef"}
+              />
+            </div>
+            <div className="min-w-0 flex-none basis-full md:basis-auto">
+              <Slides src={"/girl.png"} alt={"girl"} rankChef={"Junior Chef"} />
+            </div>
+            <div className="min-w-0 flex-none basis-full md:basis-auto">
+              <Slides
+                src={"/boyone.svg"}
+                alt={"boyone"}
+                rankChef={"Senior Chef"}
+              />
+            </div>
+            <div className="min-w-0 flex-none basis-full md:basis-auto">
+              <Slides
+                src={"/boytwo.svg"}
+                alt={"boytwo"}
+                rankChef={"Junior Chef"}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
