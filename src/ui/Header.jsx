@@ -16,9 +16,12 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
           <Logo />
         </div>
         <nav
-          className={`absolute top-12 right-0 ${show ? "" : "hidden"} nav rounded-bl-lg bg-white sm:static`}
+          className={`absolute top-0 right-0 left-0 ${show ? "" : "hidden"} nav rounded-bl-lg bg-white sm:static md:block`}
         >
-          <ul className="flex flex-col gap-8 px-15 pt-2 pb-5 text-xl text-gray-700 sm:flex-row sm:gap-5 sm:px-0 sm:text-gray-700 md:text-lg">
+          <p className="py-4 pl-7 sm:hidden">
+            <Logo />
+          </p>
+          <ul className="flex flex-col gap-5 px-14 pt-4 pb-5 text-xl text-gray-700 sm:flex-row sm:px-0 sm:text-gray-700 md:items-center md:gap-15 md:text-lg">
             <li
               onClick={() => scrollTo(homeRef)}
               className="cursor-pointer hover:text-[var(--defaultColor)]"
@@ -43,26 +46,23 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
             >
               Gallery
             </li>
+            <p className="top-18 right-10 flex cursor-pointer items-center text-xl">
+              <img
+                className="hidden h-4 sm:block md:h-8"
+                src="/call.png"
+                alt="call"
+              />
+              <span className="text-lg text-black hover:text-amber-700 md:text-sm lg:text-lg">
+                +1(909) 235-9814
+              </span>
+            </p>
+            <div className="flex w-fit flex-col gap-6 md:flex-row">
+              <Button variation="signIn">Sign in</Button>
+              <Button variation="signUp">Sign up</Button>
+            </div>
           </ul>
         </nav>
-        <p className="top-18 right-10 flex cursor-pointer items-center text-xl">
-          <img
-            className="hidden h-4 sm:block md:h-8"
-            src="/call.png"
-            alt="call"
-          />{" "}
-          <span className="hidden text-xs text-black hover:text-amber-700 sm:block md:text-sm lg:text-lg">
-            +1(909) 235-9814
-          </span>
-        </p>
-        <div className="flex items-center gap-6">
-          <Button className="hidden lg:block" variation="signIn">
-            Sign in
-          </Button>
-          <Button className="hidden lg:block" variation="signUp">
-            Sign up
-          </Button>
-        </div>
+
         <button
           onClick={handleClick}
           className={`absolute right-4 flex flex-col gap-1 sm:hidden`}
