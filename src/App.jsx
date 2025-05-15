@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <main className="m-auto max-w-[1440px]">
+    <main className="relative m-auto max-w-[1440px]">
       <Header
         scrollTo={scrollTo}
         homeRef={homeRef}
@@ -74,7 +74,7 @@ function App() {
       {!inView && (
         <button
           onClick={() => scrollTo(homeRef)}
-          className="fixed right-5 bottom-3 z-1000 h-9 w-8 cursor-pointer rounded-lg bg-[var(--defaultColor)] text-center text-2xl font-bold text-gray-900 md:h-11 md:w-10"
+          className="fixed right-6 bottom-6 z-1000 h-9 w-8 cursor-pointer rounded-lg bg-[#df685383] text-center text-2xl font-bold text-gray-900 md:h-11 md:w-10"
         >
           &#x2191;
         </button>

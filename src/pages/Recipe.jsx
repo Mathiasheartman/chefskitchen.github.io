@@ -37,9 +37,9 @@ function Recipe({ recipeRef }) {
         </div>
       </div>
 
-      <div className="relative bg-[var(--defaultColorfade)] pt-25 pb-30 text-center">
+      <div className="relative bg-[var(--defaultColorfade)] pt-25 pb-10 text-center">
         <img
-          className="absolute right-0 bottom-160 hidden h-120 lg:block"
+          className="absolute right-0 bottom-140 hidden h-100 lg:block"
           src="/burgerPot.png"
           alt="burger"
         />
