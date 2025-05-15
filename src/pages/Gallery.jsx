@@ -11,16 +11,20 @@ function Gallery({ galleryRef }) {
         Gallery of our cooked food.
       </h1>
 
-      <div className="flex gap-6">
-        <div className="flex flex-col gap-6">
+      <div className="flex gap-3 md:gap-6">
+        <div className="flex flex-col gap-3 md:gap-6">
           <img className="w-200" src="/foodone.jpg" alt="foodone" />
-          <img className="w-200 rounded-3xl" src="/foodtwo.jpg" alt="foodtwo" />
+          <img
+            className="w-200 rounded-lg md:rounded-3xl"
+            src="/foodtwo.jpg"
+            alt="foodtwo"
+          />
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-3 md:gap-6">
           <img className="w-200" src="/foodthree.jpg" alt="foodthree" />
           <img
-            className="w-200 rounded-3xl"
+            className="w-200 rounded-lg md:rounded-3xl"
             src="/foodfour.jpg"
             alt="foodfour"
           />
