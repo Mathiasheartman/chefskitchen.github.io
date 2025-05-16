@@ -2,7 +2,7 @@ function Gallery({ galleryRef }) {
   return (
     <section
       ref={galleryRef}
-      className="px-7 pt-20 pb-30 text-center md:px-10 lg:pt-20 lg:pb-60"
+      className="px-7 pt-20 pb-20 text-center md:px-10 md:pb-30 lg:pt-20 lg:pb-60"
     >
       <h4 className="pb-3 text-sm tracking-[0.7rem] text-[var(--defaultColor)] md:text-lg">
         Our Gallery

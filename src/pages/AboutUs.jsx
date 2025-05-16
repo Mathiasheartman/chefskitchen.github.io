@@ -10,8 +10,8 @@ function AboutUs({ aboutUsRef }) {
       <h1 className="text-2xl md:m-auto lg:text-4xl xl:text-5xl">
         Get a many of interesting features.
       </h1>
-      <div className="justify-center gap-5 pt-30 md:flex-col lg:mb-30 lg:flex lg:flex-row">
-        <div className="pb-20 sm:flex sm:gap-6 sm:pb-0">
+      <div className="justify-center gap-5 pt-30 md:flex md:flex-col lg:mb-30 lg:flex-row">
+        <div className="justify-center pb-20 sm:flex sm:gap-6 sm:pb-0">
           <div className="featureBg relative mb-20 h-100 rounded-4xl sm:mb-0 lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"
@@ -52,7 +52,7 @@ function AboutUs({ aboutUsRef }) {
           </div>
         </div>
 
-        <div className="pb-20 sm:pb-0 md:flex md:gap-6">
+        <div className="justify-center pb-20 sm:pb-0 md:flex md:gap-6">
           <div className="featureBg relative mb-20 h-100 rounded-4xl sm:mb-0 lg:h-50 lg:w-50 xl:h-50 xl:w-75">
             <img
               className="absolute bottom-60 left-1/2 -translate-x-1/2 lg:bottom-2 lg:h-75"

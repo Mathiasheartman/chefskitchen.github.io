@@ -8,7 +8,7 @@ function Recipe({ recipeRef }) {
 
   return (
     <section ref={recipeRef} className="text-center lg:text-left">
-      <div className="items-center px-7 pb-30 md:px-10 lg:flex">
+      <div className="items-center px-7 pb-20 md:px-10 md:pb-30 lg:flex">
         <img
           className="m-auto md:h-140 lg:h-150 lg:max-w-150"
           src="/cookWithUs.png"
