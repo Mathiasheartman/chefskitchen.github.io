@@ -7,7 +7,7 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   const [show, setShow] = useState(false);
   const navRef = useRef(null);
   const toggleBtnRef = useRef(null);
-  const [top, setTop] = useState();
+  const [top, setTop] = useState(true);
 
   const handleClick = function () {
     setShow((prev) => !prev);
