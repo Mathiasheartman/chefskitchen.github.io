@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import Logo from "./Logo";
+import TopWatcher from "./topWatcher";
 
 function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   const [show, setShow] = useState(false);
   const navRef = useRef(null);
   const toggleBtnRef = useRef(null);
-  const [top, setTop] = useState(false);
+  const [top, setTop] = useState();
 
   const handleClick = function () {
     setShow((prev) => !prev);
@@ -29,30 +30,17 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setTop(entry.isIntersecting);
-      },
-      { threshold: 0.5 },
-    );
-
-    if (homeRef.current) {
-      observer.observe(homeRef.current);
-    }
-
-    return () => {
-      if (homeRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(homeRef.current);
-      }
+    const handleScroll = () => {
+      setTop(window.scrollY === 0);
     };
-  }, [homeRef]);
 
-  const navChange = top ? "bg-gray-200" : "bg-gray-100";
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 m-auto bg-gray-100 px-7 py-3 md:py-0 lg:max-w-[1440px] ${navChange}`}
+      className={`fixed top-0 right-0 left-0 z-50 m-auto px-7 py-3 transition-all duration-300 lg:max-w-[1440px] ${top ? "bg-gray-200 md:py-2" : "bg-gray-200 shadow-lg md:h-20 md:py-0"}`}
     >
       <div className="flex items-center justify-between pt-1 pb-2 md:pt-0 md:pb-1">
         <div>
