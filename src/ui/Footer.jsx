@@ -3,115 +3,108 @@ import Logo from "./Logo";
 function Footer({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   return (
     <footer>
-      <div className="gap-50 px-7 py-15 md:px-10 md:py-25 lg:flex">
+      <div className="flex flex-wrap px-7 py-15 md:px-10 md:py-25">
         <div>
           <Logo />
           <p className="pt-8 pb-5 text-sm text-gray-400 md:w-80 lg:pb-0">
             Open an account in minutes, get full financial control for much
             longer.
           </p>
-          <a href=""></a>
-          <a href=""></a>
-          <a href=""></a>
+          <div className="my-10 flex gap-7">
+            <a href="">
+              <img
+                className="h-10 rounded-full bg-white p-3"
+                src="/facebook.png"
+                alt="facebook"
+              />
+            </a>
+
+            <a href="">
+              <img
+                className="h-10 rounded-full bg-white p-3"
+                src="/instagram.png"
+                alt="instagram"
+              />
+            </a>
+            <a href="">
+              <img
+                className="h-10 rounded-full bg-white p-3"
+                src="/x.png"
+                alt="x"
+              />
+            </a>
+          </div>
         </div>
 
-        <div className="m-auto flex flex-row justify-between gap-9 md:w-170 md:gap-0 lg:justify-around">
-          <div className="flex flex-col gap-3 md:gap-5">
-            <h1 className="text-md md:text-2xl">Company</h1>
-            <div className="flex flex-col gap-3 text-lg text-gray-400">
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                About
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Careers
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Mobile
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Blog
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                How we work?
-              </a>
+        <div className="m-auto flex flex-row flex-wrap gap-10 sm:gap-20 md:gap-40">
+          <div className="flex flex-row gap-10 sm:gap-20 md:gap-40">
+            <div className="flex flex-col gap-3 md:gap-5">
+              <h1 className="text-2xl">Company</h1>
+              <div className="flex flex-col gap-3 text-lg text-gray-400">
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  About
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Careers
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Mobile
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Blog
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  How we work?
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 md:gap-5">
+              <h1 className="text-2xl">Information</h1>
+              <div className="flex flex-col gap-3 text-lg text-gray-400">
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Help/FAQ
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Press
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Affiliates
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Hotel owners
+                </a>
+                <a className="hover:text-[var(--defaultColor)]" href="">
+                  Partners
+                </a>
+              </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-3 md:gap-5">
-            <h1 className="text-md md:text-2xl">Information</h1>
-            <div className="flex flex-col gap-3 text-lg text-gray-400">
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Help/FAQ
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Press
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Affiliates
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Hotel owners
-              </a>
-              <a
-                className="text-sm hover:text-[var(--defaultColor)] md:text-lg"
-                href=""
-              >
-                Partners
-              </a>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-3 md:gap-5">
-            <h1 className="text-md md:text-2xl">More</h1>
+            <h1 className="text-2xl">More</h1>
             <ul className="flex flex-col gap-3 text-lg text-gray-400">
               <li
                 onClick={() => scrollTo(homeRef)}
-                className="md:text-md cursor-pointer text-sm hover:text-[var(--defaultColor)]"
+                className="cursor-pointer hover:text-[var(--defaultColor)]"
               >
                 Home
               </li>
               <li
                 onClick={() => scrollTo(aboutUsRef)}
-                className="md:text-md cursor-pointer text-sm hover:text-[var(--defaultColor)]"
+                className="cursor-pointer hover:text-[var(--defaultColor)]"
               >
                 About us
               </li>
               <li
                 onClick={() => scrollTo(recipeRef)}
-                className="md:text-md cursor-pointer text-sm hover:text-[var(--defaultColor)]"
+                className="cursor-pointer hover:text-[var(--defaultColor)]"
               >
                 Recipe
               </li>
               <li
                 onClick={() => scrollTo(galleryRef)}
-                className="md:text-md cursor-pointer text-sm hover:text-[var(--defaultColor)]"
+                className="cursor-pointer hover:text-[var(--defaultColor)]"
               >
                 Gallery
               </li>

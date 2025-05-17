@@ -3,14 +3,18 @@ import styled, { css } from "styled-components";
 const variations = {
   signIn: css`
     background-color: var(--defaultColorfade);
+    color: #df6853;
     &:hover {
       background-color: #df6853;
+      color: white;
     }
   `,
   signUp: css`
     background-color: #df6853;
+    color: white;
     &:hover {
       background-color: var(--defaultColorfade);
+      color: #df6853;
     }
   `,
   LetsCook: css`

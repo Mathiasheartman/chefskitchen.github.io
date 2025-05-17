@@ -35,8 +35,6 @@ function App() {
     };
   }, []);
 
-  console.log(inView);
-
   const scrollTo = (ref, offset = 150) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
 
@@ -50,7 +48,7 @@ function App() {
   };
 
   return (
-    <main className="relative m-auto max-w-[1440px]">
+    <main className="relative m-auto max-w-[1440px] bg-gray-200">
       <Header
         scrollTo={scrollTo}
         homeRef={homeRef}

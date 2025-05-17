@@ -6,6 +6,7 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
   const [show, setShow] = useState(false);
   const navRef = useRef(null);
   const toggleBtnRef = useRef(null);
+  const [top, setTop] = useState(false);
 
   const handleClick = function () {
     setShow((prev) => !prev);
@@ -27,15 +28,39 @@ function Header({ homeRef, scrollTo, aboutUsRef, recipeRef, galleryRef }) {
     };
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setTop(entry.isIntersecting);
+      },
+      { threshold: 0.5 },
+    );
+
+    if (homeRef.current) {
+      observer.observe(homeRef.current);
+    }
+
+    return () => {
+      if (homeRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(homeRef.current);
+      }
+    };
+  }, [homeRef]);
+
+  const navChange = top ? "bg-gray-200" : "bg-gray-100";
+
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 m-auto bg-white px-7 py-3 lg:max-w-[1440px]">
-      <div className="flex items-center justify-between pt-1 pb-2">
+    <header
+      className={`fixed top-0 right-0 left-0 z-50 m-auto bg-gray-100 px-7 py-3 md:py-0 lg:max-w-[1440px] ${navChange}`}
+    >
+      <div className="flex items-center justify-between pt-1 pb-2 md:pt-0 md:pb-1">
         <div>
           <Logo />
         </div>
         <nav
           ref={navRef}
-          className={`absolute top-0 right-0 left-0 ${show ? "" : "hidden"} nav navCard rounded-bl-lg bg-white md:static md:block`}
+          className={`absolute top-0 right-0 left-0 ${show ? "" : "hidden"} nav navCard rounded-bl-lg md:static md:block`}
         >
           <p className="py-4 pl-7 md:hidden">
             <Logo />
